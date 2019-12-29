@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MutationObserver</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    let mutationObserver = new MutationObserver(() => {
+        console.log(app.children.length)
+    })
+    mutationObserver.observe(app, {
+        childList: true
+    })
+    for (let index = 0; index < 10; index++) {
+      app.appendChild(document.createElement('span'))
+    }
+    // TODO...
+    for (let index = 0; index < 10; index++) {
+      app.appendChild(document.createElement('span'))
+    }
+  </script>
+</body>
+
+</html>
