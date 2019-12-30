@@ -1,9 +1,9 @@
 最近频繁遇到Chrome崩溃的问题，从前段时间推出的 Google Chrome 78.0.x版 和近期推出的 Google Chrome 79.0.x版 类似问题时有发生。 
 出现类似问题的浏览器及版本：
-Google Chrome 78.0.x（2019年10月）
-Google Chrome 79.0.x（2019年12月）
-Microsoft Edge 78.0.x
-Microsoft Edge 79.0.x
+- Google Chrome 78.0.x（2019年10月）
+- Google Chrome 79.0.x（2019年12月）
+- Microsoft Edge 78.0.x
+- Microsoft Edge 79.0.x
 
 ## 主要原因：
 引发此类问题的真凶，就是 Chrome 78版本 之后引入的‘渲染器代码完整性保护’（Renderer Code Integrity Protection）方案。 
@@ -14,9 +14,9 @@ Chrome 团队已经承认了用户提交的标签页崩溃报告，并希望大�
 
 解决方案：
 1. 禁用渲染器代码完整性保护（Renderer Code Integrity）功能 ，
-- 右键点击桌面上的 Chrome 快捷方式，然后选择‘属性’。
+- 右键点击桌面上的 Chrome 快捷方式，然后选择`属性`。
 - 在目标字段尾部添加如下命令行 `--disable-features=RendererCodeIntegrity`
-- 点击‘应用’并重新启动 Chrome。
+- 点击`应用`并重新启动 Chrome。
 
 2. 我们通过测试发现启用沙盒模式也能正常使用，在Chrome属性里面把目标改为 `--test-type --no-sandbox`
 
